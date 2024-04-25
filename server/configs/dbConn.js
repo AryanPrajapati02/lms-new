@@ -9,7 +9,8 @@ config();
  * With strict query set to true, Mongoose will return an error if you try to
  * query for a non-existent field.
  */
-// mongoose.set("strictQuery", false);
+mongoose.set("strictQuery", false);
+
 
 const connectToDB = async () => {
   try {
