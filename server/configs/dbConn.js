@@ -12,14 +12,15 @@ mongoose.set("strictQuery", false);
 const connectToDB = async () => {
   try {
     const { connection } = await mongoose.connect(
-      process.env.MONGO_URI || `mongodb://127.0.0.1:27017/lms-neww`
+      process.env.MONGO_URI
+      // || `mongodb://127.0.0.1:27017/lms-neww`
     );
 
     if (connection) {
       console.log(`Connected to MongoDB: ${connection.host}`);
     }
   } catch (error) { 
-    console.log(error);
+    console.log(error , "........Error connecting to MongoDB");
     process.exit(1);
   }
 };
